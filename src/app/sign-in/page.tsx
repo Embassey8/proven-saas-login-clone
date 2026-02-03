@@ -130,7 +130,7 @@ export default function SignIn() {
         </div>
       </div>
 
-      {/* Right side - Decorative image with header */}
+      {/* Right side - Decorative image with header text */}
       <div className="bg-muted relative hidden lg:block">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
         <img
@@ -138,12 +138,13 @@ export default function SignIn() {
           alt="Proven SaaS Analytics"
           className="w-full h-full object-cover"
         />
-        {/* Header overlay on right side */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center">
+        {/* Header text overlay */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
+          <h2 className="text-lg text-muted-foreground mb-4">Proven SaaS Analytics</h2>
           <h1 className="text-4xl font-bold mb-4">Find, Launch & Track</h1>
           <h2 className="text-2xl font-bold mb-6">Profitable SaaS</h2>
           <p className="text-lg mb-8 max-w-md">
-            Stop guessing. See what's already working and copy the winners
+            Stop guessing. See what's already working and copy winners
           </p>
           <div className="text-2xl font-bold">14,500+ Profitable SaaS</div>
         </div>
