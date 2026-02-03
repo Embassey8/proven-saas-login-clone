@@ -88,7 +88,7 @@ export default function SignUp() {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-none border-0 h-9 rounded-md text-sm font-medium mt-4"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm border border-transparent h-9 rounded-md text-sm font-medium mt-4 px-4 py-2 transition-all"
               >
                 Continue
               </button>
