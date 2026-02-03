@@ -59,8 +59,8 @@ export default function SignUp() {
         {/* Spacer */}
         <div className="flex flex-1 items-center justify-center px-2 lg:px-0">
           <div className="w-full max-w-sm">
-            {/* Header Card with Border */}
-            <div className="bg-white shadow-lg rounded-lg p-8 mb-8 border border-input">
+            {/* Header Card - No Border, No Shadow */}
+            <div className="bg-white p-8 mb-6">
               <h1 className="text-2xl font-bold mb-2">Create an account</h1>
               <p className="text-sm text-muted-foreground">
                 Get started with Proven SaaS today
@@ -91,7 +91,7 @@ export default function SignUp() {
                   <input
                     id="signup-password"
                     type={showPassword ? "text" : "password"}
-                    placeholder="•••••••"
+                    placeholder="••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 shadow-none border-0"
@@ -109,7 +109,7 @@ export default function SignUp() {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm border-transparent h-9 rounded-md text-sm font-medium mt-4 px-4 py-2 transition-all"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-none border-0 h-9 rounded-md text-sm font-medium mt-4 px-4 py-2 transition-all"
               >
                 Continue
               </button>
