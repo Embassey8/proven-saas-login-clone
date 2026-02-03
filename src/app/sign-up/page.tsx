@@ -90,7 +90,7 @@ export default function SignUp() {
                 type="submit"
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-none border-0 h-9 rounded-md text-sm font-medium mt-4"
               >
-                Sign up
+                Continue
               </button>
             </form>
 
