@@ -14,6 +14,10 @@ const config: Config = {
           foreground: "#ffffff",
         },
       },
+      fontFamily: {
+        sans: ["Geist", "Geist Fallback", "system-ui", "-apple-system", "sans-serif"],
+        mono: ["Geist Mono", "Geist Mono Fallback", "monospace"],
+      },
     },
   },
   plugins: [],

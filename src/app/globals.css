@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/media/8d697b304b401681-s.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Geist Fallback";
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/media/9610d9e46709d722-s.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Geist Mono Fallback";
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -9,6 +43,7 @@
 }
 
 body {
+  font-family: "Geist", "Geist Fallback", system-ui, -apple-system, sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
