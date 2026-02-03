@@ -39,9 +39,9 @@ export default function SignIn() {
         {/* Spacer */}
         <div className="flex flex-1 items-center justify-center px-2 lg:px-0">
           <div className="w-full max-w-sm">
-            <div className="mb-8">
-              <h1 className="text-2xl font-bold">Welcome back</h1>
-              <p className="text-sm text-muted-foreground mt-2">
+            <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
+              <h1 className="text-2xl font-bold mb-2">Welcome back</h1>
+              <p className="text-sm text-muted-foreground">
                 Sign in to your account
               </p>
             </div>

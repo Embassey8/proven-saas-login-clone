@@ -39,9 +39,9 @@ export default function SignUp() {
         {/* Spacer */}
         <div className="flex flex-1 items-center justify-center px-2 lg:px-0">
           <div className="w-full max-w-sm">
-            <div className="mb-8">
-              <h1 className="text-2xl font-bold">Create an account</h1>
-              <p className="text-sm text-muted-foreground mt-2">
+            <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
+              <h1 className="text-2xl font-bold mb-2">Create an account</h1>
+              <p className="text-sm text-muted-foreground">
                 Get started with Proven SaaS today
               </p>
             </div>
@@ -129,7 +129,7 @@ export default function SignUp() {
         </div>
       </div>
 
-      {/* Right side - Decorative image */}
+      {/* Right side - Decorative image with header */}
       <div className="bg-muted relative hidden lg:block">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
         <img
@@ -137,6 +137,14 @@ export default function SignUp() {
           alt="Proven SaaS Analytics"
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
+          <h1 className="text-4xl font-bold mb-4">Find, Launch & Track</h1>
+          <h2 className="text-2xl font-bold mb-6">Profitable SaaS</h2>
+          <p className="text-lg mb-8 max-w-md">
+            Stop guessing. See what's already working and copy the winners
+          </p>
+          <div className="text-2xl font-bold">14,500+ Profitable SaaS</div>
+        </div>
       </div>
     </div>
   );
