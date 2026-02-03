@@ -14,21 +14,30 @@ export default function SignIn() {
 
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
-      {/* Left side - Form */}
-      <div className="flex flex-col gap-4 p-2 lg:p-10">
-        {/* Header */}
-        <div className="mb-8">
-          <h2 className="text-lg text-muted-foreground">Proven SaaS Analytics</h2>
-          <h1 className="text-4xl font-bold mb-2">Find, Launch & Track</h1>
-          <h2 className="text-2xl font-bold mb-4">Profitable SaaS</h2>
-          <p className="text-base mb-6 max-w-md">
+      {/* Right side - Decorative image with header text */}
+      <div className="bg-muted relative hidden lg:block">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
+        <img
+          src="/login_side.webp"
+          alt="Proven SaaS Analytics"
+          className="w-full h-full object-cover"
+        />
+        {/* Header text overlay on decorative image */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
+          <h1 className="text-lg text-muted-foreground mb-4">Proven SaaS Analytics</h1>
+          <h1 className="text-4xl font-bold mb-4">Find, Launch & Track</h1>
+          <h1 className="text-2xl font-bold mb-4">Profitable SaaS</h1>
+          <p className="text-base mb-8 max-w-md">
             Stop guessing. See what's already working and copy winners
           </p>
           <div className="text-2xl font-bold">14,500+ Profitable SaaS</div>
         </div>
+      </div>
 
-        {/* Logo/Brand */}
-        <div className="flex justify-center gap-2 lg:justify-start">
+      {/* Left side - Logo, Header Group, and Form */}
+      <div className="flex flex-col gap-4 p-2 lg:p-10">
+        {/* Logo/Brand - Top Right */}
+        <div className="flex justify-center gap-2 lg:justify-end">
           <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
             <svg
               className="size-4"
@@ -47,9 +56,10 @@ export default function SignIn() {
           <span className="font-medium">Proven SaaS</span>
         </div>
 
-        {/* Form with Header Card */}
+        {/* Spacer */}
         <div className="flex flex-1 items-center justify-center px-2 lg:px-0">
           <div className="w-full max-w-sm">
+            {/* Header Group */}
             <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
               <h1 className="text-2xl font-bold mb-2">Welcome back</h1>
               <p className="text-sm text-muted-foreground">
@@ -57,6 +67,7 @@ export default function SignIn() {
               </p>
             </div>
 
+            {/* Form with Header */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="email" className="text-sm font-medium leading-none mb-2">
@@ -81,7 +92,7 @@ export default function SignIn() {
                   <input
                     id="password"
                     type={showPassword ? "text" : "password"}
-                    placeholder="••••••"
+                    placeholder="•••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 shadow-none border-0"
@@ -99,7 +110,7 @@ export default function SignIn() {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 border-0 h-9 rounded-md text-sm font-medium mt-4 px-4 py-2 transition-all"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-none border-0 h-9 rounded-md text-sm font-medium mt-4 px-4 py-2 transition-all"
               >
                 Continue
               </button>
@@ -122,7 +133,7 @@ export default function SignIn() {
 
               <button className="w-full flex items-center justify-center gap-2 border border-input hover:bg-accent hover:text-accent-foreground hover:shadow-md transition-shadow border-0 h-9 rounded-md text-sm font-medium">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047 138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
                 GitHub
               </button>
@@ -138,16 +149,6 @@ export default function SignIn() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Right side - Decorative image */}
-      <div className="bg-muted relative hidden lg:block">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
-        <img
-          src="/login_side.webp"
-          alt="Proven SaaS Analytics"
-          className="w-full h-full object-cover"
-        />
       </div>
     </div>
   );
