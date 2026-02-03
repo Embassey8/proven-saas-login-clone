@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground-rgb: 10, 10, 10;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #f3f4f6;
+  font-family: "Geist", "Geist Fallback", system-ui, -apple-system, sans-serif;
+}
+
 @font-face {
   font-family: "Geist";
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url(/_next/static/media/8d697b304b401681-s.woff2) format("woff2");
+  src: url(/public/8d697b304b401681-s.woff2) format("woff2");
 }
 
 @font-face {
@@ -24,7 +36,7 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url(/_next/static/media/9610d9e46709d722-s.woff2) format("woff2");
+  src: url(/public/9610d9e46709d722-s.woff2) format("woff2");
 }
 
 @font-face {
@@ -34,21 +46,4 @@
   descent-override: 21.92%;
   line-gap-override: 0.00%;
   size-adjust: 134.59%;
-}
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-body {
-  font-family: "Geist", "Geist Fallback", system-ui, -apple-system, sans-serif;
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
