@@ -14,7 +14,7 @@ export default function SignIn() {
 
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
-      {/* Right side - Decorative image with header text overlay */}
+      {/* Right side - Decorative image with header text */}
       <div className="bg-muted relative hidden lg:block">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
         <img
@@ -59,15 +59,15 @@ export default function SignIn() {
         {/* Spacer */}
         <div className="flex flex-1 items-center justify-center px-2 lg:px-0">
           <div className="w-full max-w-sm">
-            {/* Header Card - No Border, No Shadow */}
-            <div className="bg-white p-8 mb-6">
+            {/* Header Card */}
+            <div className="bg-white p-8 mb-8">
               <h1 className="text-2xl font-bold mb-2">Welcome back</h1>
               <p className="text-sm text-muted-foreground">
                 Sign in to your account
               </p>
             </div>
 
-            {/* Form Group with Shadow and Border */}
+            {/* Form, divider, social buttons, and footer wrapper with box shadow */}
             <div className="border border-input shadow-lg rounded-lg p-6 space-y-4">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -93,7 +93,7 @@ export default function SignIn() {
                     <input
                       id="password"
                       type={showPassword ? "text" : "password"}
-                      placeholder="•••••••"
+                      placeholder="••••••"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 shadow-none border-0"
