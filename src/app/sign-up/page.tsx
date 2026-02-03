@@ -39,13 +39,6 @@ export default function SignUp() {
         {/* Spacer */}
         <div className="flex flex-1 items-center justify-center px-2 lg:px-0">
           <div className="w-full max-w-sm">
-            <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
-              <h1 className="text-2xl font-bold mb-2">Create an account</h1>
-              <p className="text-sm text-muted-foreground">
-                Get started with Proven SaaS today
-              </p>
-            </div>
-
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="signup-email" className="text-sm font-medium leading-none mb-2">
@@ -129,7 +122,7 @@ export default function SignUp() {
         </div>
       </div>
 
-      {/* Right side - Decorative image with header */}
+      {/* Right side - Decorative image with headers */}
       <div className="bg-muted relative hidden lg:block">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
         <img
@@ -137,7 +130,30 @@ export default function SignUp() {
           alt="Proven SaaS Analytics"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
+        {/* Left side header */}
+        <div className="absolute inset-0 flex items-center justify-center p-10">
+          <div className="w-full max-w-sm">
+            <div className="bg-white shadow-lg rounded-lg p-8">
+              <h1 className="text-2xl font-bold mb-2">Welcome back</h1>
+              <p className="text-sm text-muted-foreground">
+                Sign in to your account
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* Right side header */}
+        <div className="absolute inset-0 flex items-center justify-end p-10">
+          <div className="w-full max-w-sm text-right">
+            <div className="bg-white shadow-lg rounded-lg p-8 ml-auto">
+              <h1 className="text-2xl font-bold mb-2">Create an account</h1>
+              <p className="text-sm text-muted-foreground">
+                Get started with Proven SaaS today
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* Bottom header */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center">
           <h1 className="text-4xl font-bold mb-4">Find, Launch & Track</h1>
           <h2 className="text-2xl font-bold mb-6">Profitable SaaS</h2>
           <p className="text-lg mb-8 max-w-md">
